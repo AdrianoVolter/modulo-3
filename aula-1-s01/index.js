@@ -1,32 +1,18 @@
-
-class DiasDaSemana {
-    constructor(dia) {
-        this.dia = dia;
-    }
-
-    getDias() {
-        switch (this.dia) {
-            case 1:
-                return 'Domingo';
-            case 2:
-                return 'Segunda-feira';
-            case 3:
-                return 'Terça-feira';
-            case 4:
-                return 'Quarta-feira';
-            case 5:
-                return 'Quinta-feira';
-            case 6:
-                return 'Sexta-feira';
-            case 7:
-                return 'Sábado';
-            default:
-                return 'Dia inválido';
-        }
-    }
-}
-
-const DiaDaSemana = new DiasDaSemana(3);
-
-console.log(DiaDaSemana.getDias());
-
+const dias = [
+    'Domingo',
+    'Segunda-feira',
+    'Terça-feira',
+    'Quarta-feira',
+    'Quinta-feira',
+    'Sexta-feira',
+    'Sábado'
+  ];
+  
+  function DiaDaSemana(dia) {
+    const diaDaSemana = dias[dia - 1];
+    return diaDaSemana ? diaDaSemana : 'Dia inválido';
+  }
+  
+  const diaDaSemana = DiaDaSemana(5);
+  console.log(diaDaSemana);
+  
