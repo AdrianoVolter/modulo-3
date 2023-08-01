@@ -1,18 +1,22 @@
-const dias = [
-    'Domingo',
-    'Segunda-feira',
-    'Terça-feira',
-    'Quarta-feira',
-    'Quinta-feira',
-    'Sexta-feira',
-    'Sábado'
-  ];
+function getWeekDayName(day) {
+    const weekDays = [
+      'Domingo',
+      'Segunda-feira',
+      'Terça-feira',
+      'Quarta-feira',
+      'Quinta-feira',
+      'Sexta-feira',
+      'Sábado'
+    ];
   
-  function DiaDaSemana(dia) {
-    const diaDaSemana = dias[dia - 1];
-    return diaDaSemana ? diaDaSemana : 'Dia inválido';
+    const weekDay = weekDays[day - 1];
+    return weekDay ? weekDay : 'Dia inválido';
   }
   
-  const diaDaSemana = DiaDaSemana(5);
-  console.log(diaDaSemana);
+  function main() {
+    const diaDaSemana = getWeekDayName(3);
+    console.log(diaDaSemana);
+  }
+  
+  main();
   
