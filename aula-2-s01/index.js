@@ -1,13 +1,14 @@
-function mrv(arr){
-    let mv = arr[0];
-    for(let i = 1; i < arr.length; i++){
-        if(arr[i] > mv){
-            mv = arr[i];
+function acharMaiorValor(lista){
+    let maiorValor = lista[0];
+
+    for(let i = 1; i < lista.length; i++){
+        if(lista[i] > maiorValor){
+            maiorValor = lista[i];
         }
     }
-    return mv;
+
+    return maiorValor;
 }
 
-const valores = [10, 5, 8, 20, 3];
-
-console.log('Maior valor: ', mrv(valores));
+const valores = [10, 5, 8, 20, 3, 89];
+console.log('Maior valor: ', acharMaiorValor(valores));
