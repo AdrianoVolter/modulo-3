@@ -7,7 +7,7 @@ class Pedido {
     }
 
     calcularValorTotal(){
-        this.valorTotal = this.itens.reduce((total, item) => total + item.precoUnitario, 0);
+        this.valorTotal = this.itens.reduce((total, item) => total + item.precoUnitario * item.quantidade, 0);
     }
 
     adicionarItem(item, precoUnitario, quantidade){
