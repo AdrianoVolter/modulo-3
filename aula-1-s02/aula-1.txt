@@ -1,0 +1,20 @@
+Introdução à Virtualização e Containers
+
+Compreender os conceitos fundamentais de virtualização e containers.
+Familiarizar-se com o Docker e suas principais funcionalidades.
+Obter uma visão geral dos conceitos básicos do Kubernetes como orquestrador de contêineres.
+Realizar práticas com o Docker e entender o uso de Kubernetes para criar e gerenciar ambientes de desenvolvimento.
+
+Compreender o conceito de virtualização e suas vantagens.
+Diferenciar virtualização de containers.
+Introduzir o Docker como uma solução de virtualização baseada em containers.
+Instalar o Docker no ambiente de desenvolvimento.
+
+Definição:
+Uma técnica que permite a criação de ambientes virtuais (máquinas virtuais) dentro de um único hardware físico.
+
+
+Com a virtualização, é possível executar múltiplos sistemas operacionais e aplicativos de forma isolada e independente, como se cada um deles estivesse sendo executado em seu próprio hardware dedicado.
+
+
+rancher.com
