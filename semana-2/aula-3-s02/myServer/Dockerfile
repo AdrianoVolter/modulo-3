@@ -6,5 +6,9 @@ COPY package.json ./
 
 RUN npm install
 
+RUN command
+
 COPY . /app
+
+
 
