@@ -1,0 +1,12 @@
+#tipos de nuvem
+
+cloud public 
+ Uma nuvem é chamada de "nuvem pública" quando os serviços são prestados em uma rede aberta para uso público. Os serviços de nuvem pública podem ser gratuitos ou oferecidos em um modelo de pagamento por uso.
+
+cloud private 
+    Uma nuvem privada é aquela em que os serviços e infraestrutura são mantidos em uma rede privada. Geralmente, é usada por uma única organização e pode ser localizada fisicamente no data center da organização ou hospedada por um provedor de serviços de terceiros.
+
+cloud hybrid 
+    Nuvens híbridas combinam nuvens públicas e privadas, unidas por tecnologia que permite que dados e aplicativos sejam compartilhados entre elas. Ao permitir que os dados e aplicativos sejam compartilhados entre eles, as nuvens híbridas oferecem às empresas mais flexibilidade e mais opções de implantação.
+
+

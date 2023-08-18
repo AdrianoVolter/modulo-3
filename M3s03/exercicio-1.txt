@@ -1,0 +1,12 @@
+#Tipo de se serviço providos por nuvens (SaaS, PaaS, IaaS)
+Serviço  SaaS
+
+Software como serviço (SaaS) é um modelo de distribuição de software onde a empresa responsável pela manutenção do software e dos servidores relacionados, e o cliente paga pelo uso do software. O SaaS é um dos três principais segmentos da computação em nuvem, juntamente com a Infraestrutura como Serviço (IaaS) e a Plataforma como Serviço (PaaS).
+
+Serviço  PaaS
+
+Plataforma como serviço (PaaS) é um ambiente de desenvolvimento e implantação completo na nuvem, com recursos que permitem entregar tudo, desde simples aplicativos baseados na nuvem até serviços sofisticados habilitados para mobilidade, redes sociais, análise, etc.
+
+Serviço  IaaS
+
+Infraestrutura como serviço (IaaS) é um modelo de computação em nuvem que oferece aos usuários finais recursos de computação, armazenamento e rede sob demanda. Para esses recursos, os usuários pagam em uma base de pay-as-you-go.
