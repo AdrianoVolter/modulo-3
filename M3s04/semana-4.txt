@@ -1,0 +1,52 @@
+# Explique o conceito de "Fullcycle" no desenvolvimento de software e como ele abrange todas as fases do ciclo de vida de um aplicativo.
+# Como a abordagem "Fullcycle" influencia a colaboração entre equipes de desenvolvimento, teste e operações em um projeto de software?
+
+1 - O conceito de Fullcycle é o desenvolvimento de software do início ao fim, ou seja, desde a concepção da ideia até a entrega do produto final.
+
+2 - A abordagem Fullcycle influencia a colaboração entre as equipes de desenvolvimento, teste e operações em um projeto de software, pois, como o desenvolvimento é feito do início ao fim, as equipes precisam estar alinhadas para que o produto final seja entregue com qualidade e dentro do prazo.
+
+# Descreva o que é o Figma e como ele é usado no processo de design e prototipagem de interfaces de usuário.
+# Quais são os principais benefícios de usar o Figma em comparação com outras ferramentas de design tradicionais?
+
+1 - O Figma é uma ferramenta de design e prototipagem de interfaces de usuário. Ele é usado para criar, testar e compartilhar projetos de design de forma colaborativa.
+
+2 - Os principais benefícios de usar o Figma em comparação com outras ferramentas de design tradicionais são:
+
+# Qual é o papel do desenvolvedor frontend em um projeto de desenvolvimento de software? Quais tecnologias e linguagens ele geralmente utiliza?
+# Explique a diferença entre HTML, CSS e JavaScript no contexto do desenvolvimento frontend.
+
+1 - O papel do desenvolvedor frontend em um projeto de desenvolvimento de software é desenvolver a interface do usuário, ou seja, o que o usuário vê e interage. Ele geralmente utiliza HTML, CSS e JavaScript.
+
+2 - HTML é uma linguagem de marcação que define a estrutura de uma página web. CSS é uma linguagem de estilo que define a aparência de uma página web. JavaScript é uma linguagem de programação que define o comportamento de uma página web.
+
+# O que é a camada de backend em uma aplicação web e qual é sua função principal no processamento de solicitações dos usuários?
+# Quais são as principais linguagens de programação usadas no desenvolvimento de backend e como elas diferem em termos de aplicação?
+
+1 - A camada de backend em uma aplicação web é a camada que processa as solicitações dos usuários. Sua função principal é fornecer dados para a camada de frontend.
+
+2 - As principais linguagens de programação usadas no desenvolvimento de backend são: PHP, Python, Ruby, Java, Node. 
+Cada uma delas tem suas particularidades, mas todas podem ser usadas para desenvolver aplicações web.
+
+
+# Explique o conceito de arquitetura de software e como ela impacta a estrutura e o funcionamento de um sistema.
+# Compare e contraste as arquiteturas monolítica e de microsserviços, destacando suas vantagens e desvantagens.
+
+1 - A arquitetura de software é a estrutura de um sistema. Ela impacta a estrutura e o funcionamento de um sistema, pois define como os componentes do sistema se comunicam entre si.
+
+2 - A arquitetura monolítica é um sistema único, onde todos os componentes estão em um único lugar. A arquitetura de microsserviços é um sistema dividido em vários componentes menores, onde cada componente é responsável por uma parte do sistema. A vantagem da arquitetura monolítica é que ela é mais simples de ser implementada. A vantagem da arquitetura de microsserviços é que ela é mais escalável.
+
+# O que é infraestrutura de TI e por que é importante considerá-la ao desenvolver e implantar software?
+# Descreva a diferença entre infraestrutura local (on-premise) e em nuvem (cloud) e discuta os benefícios de cada abordagem.
+
+
+1 - A infraestrutura de TI é o conjunto de hardware, software, redes e serviços necessários para executar um sistema de informação. É importante considerá-la ao desenvolver e implantar software, pois ela é responsável por fornecer os recursos necessários para que o software funcione corretamente.
+
+2 - A infraestrutura local é a infraestrutura que está localizada fisicamente na empresa. A infraestrutura em nuvem é a infraestrutura que está localizada fisicamente em um provedor de nuvem. A vantagem da infraestrutura local é que ela é mais segura. A vantagem da infraestrutura em nuvem é que ela é mais escalável.
+
+
+# Qual é o processo de deploy (implantação) de software e por que é uma etapa crítica no ciclo de vida do desenvolvimento?
+# Compare os métodos de implantação manual e automatizada, destacando as vantagens de cada abordagem.
+
+1 - O processo de deploy (implantação) de software é o processo de entrega de um software para o usuário final. É uma etapa crítica no ciclo de vida do desenvolvimento, pois é nessa etapa que o software é entregue para o usuário final.
+
+2 - O método de implantação manual é o método onde o software é implantado manualmente. O método de implantação automatizada é o método onde o software é implantado automaticamente. A vantagem do método de implantação manual é que ele é mais simples de ser implementado. A vantagem do método de implantação automatizada é que ele é mais escalável.
