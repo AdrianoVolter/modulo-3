@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  left: 0; /* Alterado de 'right: 0;' para 'left: 0;' */
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow: auto;
+}
+
+.logo {
+  height: 60px;
+  /* Adicione mais estilos para o logotipo aqui */
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links li a {
+  color: #333;
+  text-decoration: none;
+}
