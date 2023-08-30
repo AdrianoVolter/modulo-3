@@ -12,6 +12,17 @@
 .logo {
   height: 60px;
   /* Adicione mais estilos para o logotipo aqui */
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
 }
 
 .sidebar-links {
@@ -27,4 +38,12 @@
 .sidebar-links li a {
   color: #333;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+  
 }

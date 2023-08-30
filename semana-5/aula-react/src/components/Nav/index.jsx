@@ -6,6 +6,7 @@ function Nav() {
     <div className="sidebar">
       <div className="logo">
         {/* Insira seu logotipo aqui */}
+        <h1>Logo</h1>
       </div>
       <ul className="sidebar-links">
         <li><Link to="/rota1">Rota 1</Link></li>
