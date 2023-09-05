@@ -1,36 +1,32 @@
-import './Rota3.styles.css';
- 
-function Rota3() {
+import "./Rota3.styles.css";
 
+function Rota3() {
   return (
     <div className="rota3">
-      <div className='topo'>
-        <h2>Unidades Geradoras</h2>
+      <div className="topo">
+        <h2>Lançamento de geração mensal</h2>
       </div>
-      <form action="">
-        <label htmlFor="nome">Unidade Geradora</label>
-        <select 
-          name="unidade" 
-          id="unidade"
-          value="unidade"
-          >
-          <option value="1">Unidade 1</option>
-          {/* {unidades.map((unidade) => (
-            <option value={unidade.id}>{unidade.nome}</option>
-          ))} */}
-        </select>
-        <label htmlFor="">Mes/ano</label>
-        <input type="month" name="" id="data"/>
-        <label htmlFor="">Total kw gerado</label>
-        <button
-          type="submit"
-          className="btn-cadastrar"
-          
-        >
-          Cadastrar
-        </button>
-      </form>
-
+      <div className="formulario">
+        <form>
+          <div className='unidade-geradora'>
+            <label>Unidade Geradora</label>
+            <select name="unidade" id="unidade" value="unidade">
+              <option value="1">Unidade 1</option>
+            </select>
+          </div>
+          <div>
+            <label>Mes/ano</label>
+            <input type="month" name="" id="data" />
+          </div>
+          <div>
+            <label>Total kw gerado</label>
+            <input type="number" name="total" id="kw" />
+          </div>
+          <button type="submit" className="btn-cadastrar">
+            Cadastrar
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
