@@ -80,13 +80,45 @@ describe("Counter Component", () => {
     expect(screen.queryByText("1")).toBeNull();
 
     userEvent.click(buttonIncrement);
-// Adiciona um delay de 1 segundo para o teste
-    await waitFor(() => { // espera o componente ser renderizado para fazer o teste
-    expect(screen.getByText("1")).toBeInTheDocument()
-    })
-
-    
+    // Adiciona um delay de 1 segundo para o teste
+    await waitFor(() => {
+      // espera o componente ser renderizado para fazer o teste
+      expect(screen.getByText("1")).toBeInTheDocument();
+    });
   });
 
-  
+  test("deve decrementar - 1 ao clicar no botão decrementar", async () => {
+    render(<Counter />);
+
+    const buttonDecrement = screen.getByRole("button", {
+      name: /decrementar/i,
+    });
+
+    expect(screen.queryByText("-1")).toBeNull();
+
+    userEvent.click(buttonDecrement);
+    // Adiciona um delay de 1 segundo para o teste
+    await waitFor(() => {
+      // espera o componente ser renderizado para fazer o teste
+      expect(screen.getByText("-1")).toBeInTheDocument();
+    });
+  });
+
+  test("deve adicionar a classe counter__title--increment no titulo , quando o valor for maior que 0", async () => {
+    render(<Counter />);
+
+    const buttonIncrement = screen.getByRole("button", {
+      name: /incrementar/i,
+    });
+
+    expect(screen.queryByText("0")).not.toHaveClass(
+      "counter__title--increment"
+    );
+    userEvent.click(buttonIncrement);
+    await waitFor(() => {
+      expect(screen.getByText("1")).toHaveClass("counter__title--increment");
+    });
+  });
+
+ 
 });
