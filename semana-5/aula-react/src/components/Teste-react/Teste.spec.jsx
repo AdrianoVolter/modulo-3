@@ -27,6 +27,46 @@ describe("Counter Component", () => {
     expect(counterTitle).not.toHaveClass("counter__title--increment");
     expect(counterTitle).not.toHaveClass("counter__title--decrement");
   });
-    
 
+  test("Deve ter um botão incrementar", () => {
+    render(<Counter />);
+
+    const buttonIncrement = screen.getByRole("button", {
+      name: /incrementar/i,
+    });
+
+    expect(buttonIncrement).toBeInTheDocument();
+  });
+
+  test("conter um botao incrementar com a classe button--incremente", () => {
+    render(<Counter />);
+
+    const buttonIncrement = screen.getByRole("button", {
+      name: /incrementar/i,
+    });
+
+    expect(buttonIncrement).toHaveClass("button");
+    expect(buttonIncrement).toHaveClass("button--increment");
+  });
+
+  test("Deve ter um botão decrementar", () => {
+    render(<Counter />);
+
+    const buttonDecrement = screen.getByRole("button", {
+      name: /decrementar/i,
+    });
+
+    expect(buttonDecrement).toBeInTheDocument();
+  });
+
+  test("deve conter um botao decrementar com a classe button--decrement", () => {
+    render(<Counter />);
+
+    const buttonDecrement = screen.getByRole("button", {
+      name: /decrementar/i,
+    });
+
+    expect(buttonDecrement).toHaveClass("button");
+    expect(buttonDecrement).toHaveClass("button--decrement");
+  });
 });
