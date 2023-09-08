@@ -119,6 +119,20 @@ describe("Counter Component", () => {
       expect(screen.getByText("1")).toHaveClass("counter__title--increment");
     });
   });
+  
+  test("deve adicionar a classe counter__title--decrement no titulo , quando o valor for menor que 0", async () => {
+    render(<Counter />);
 
- 
+    const buttonDecrement = screen.getByRole("button", {
+      name: /decrementar/i,
+    });
+
+    expect(screen.queryByText("0")).not.toHaveClass(
+      "counter__title--decrement"
+    );
+    userEvent.click(buttonDecrement);
+    await waitFor(() => {
+      expect(screen.getByText("-1")).toHaveClass("counter__title--decrement");
+    });
+  });
 });
