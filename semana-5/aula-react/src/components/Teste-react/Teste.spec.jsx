@@ -11,4 +11,22 @@ describe("Counter Component", () => {
     expect(counterTitle).toBeInTheDocument();
   });
 
+  test("deve conter a classe counter__title no titulo", () => {
+    render(<Counter />);
+
+    const counterTitle = screen.getByText("0");
+
+    expect(counterTitle).toHaveClass("counter__title");
+  });
+
+  test("não deve iniciar o titulo com as classes counter__title--increment e counter__title--decrement", () => {
+    render(<Counter />);
+
+    const counterTitle = screen.getByText("0");
+
+    expect(counterTitle).not.toHaveClass("counter__title--increment");
+    expect(counterTitle).not.toHaveClass("counter__title--decrement");
+  });
+    
+
 });

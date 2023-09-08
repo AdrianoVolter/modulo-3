@@ -5,7 +5,7 @@ function Counter() {
   const [counter, setCounter] = useState(0);
 
   function getModifier() {
-    if (counter > 0) return "counter__title--increment";
+    if (counter == 0) return "counter__title--increment";
     if (counter < 0) return "counter__title--decrement";
     return "";
   }
