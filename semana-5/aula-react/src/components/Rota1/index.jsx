@@ -1,20 +1,16 @@
+import { useState } from "react";
+import reactLogo from "../../assets/react.svg";
 
-function Rota1 () {
-    return (
-        <div
-        style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100vh",
-            width: "100vw",
-            backgroundColor: "lightblue",
-        }}
-        >
+export default function Rota1() {
+ const [count, setCount] = useState(0);
 
-            <h1>Rota 1</h1>
-        </div>
-    )
+ return (
+   <>
+     <img src={reactLogo} className="logo react" alt="React logo" />
+     <h1>Vite + React</h1>
+     <button onClick={() => setCount((count) => count + 1)}>
+       Contador: {count}
+     </button>
+   </>
+ );
 }
-
-export default Rota1;

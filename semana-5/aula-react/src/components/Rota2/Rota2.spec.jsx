@@ -1,12 +1,18 @@
-import {render, screen} from '@testing-library/react';  
-import Rota2 from './index.jsx';
+import { render, screen, act } from "@testing-library/react";
+import Joke from "./index.jsx";
 
-describe('Teste do componente Rota2', () => {
-    test('Renderize sem problemas', () => {
-        render(<Rota2 />);
-        const linkElement = screen.getByText('Rota 2');
+const mockData = { value: "O que é, o que é? Cai em pé e corre deitado? R: A chuva." };
 
-        expect(linkElement).toBeInTheDocument();
-    });
-}
-);
+global.fetch = jest.fn(() => Promise.resolve({ json: () => Promise.resolve(mockData) }));
+
+describe("Joke", () => {
+ it("should display a joke", async () => {
+   render(<Joke />);
+    screen.debug();
+   const joke = await screen.findByText(mockData.value);
+   expect(joke).toBeInTheDocument();
+    screen.debug();
+ });
+
+});
+

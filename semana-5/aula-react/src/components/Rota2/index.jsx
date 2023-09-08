@@ -1,19 +1,19 @@
 
-function Rota2 () {
-    return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-                width: "100vw",
-                backgroundColor: "lightblue",
-            }}
-        >
-            <h1>Rota 2</h1>
-        </div>
-    )
-}
+import { useEffect, useState } from "react";
 
-export default Rota2;
+export default function Rota2() {
+ const [joke, setJoke] = useState("");
+
+ useEffect(() => {
+   fetch("https://api.chucknorris.io/jokes/random")
+     .then((response) => response.json())
+     .then((data) => setJoke(data.value));
+ }, []);
+
+ return (
+   <div className="App">
+     <h1>Chuck Norris Jokes</h1>
+     <p>{joke}</p>
+   </div>
+ );
+}
