@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Counter from ".";
 
@@ -69,4 +69,24 @@ describe("Counter Component", () => {
     expect(buttonDecrement).toHaveClass("button");
     expect(buttonDecrement).toHaveClass("button--decrement");
   });
+
+  test("deve incrementar + 1 ao clicar no botão incrementar", async () => {
+    render(<Counter />);
+
+    const buttonIncrement = screen.getByRole("button", {
+      name: /incrementar/i,
+    });
+
+    expect(screen.queryByText("1")).toBeNull();
+
+    userEvent.click(buttonIncrement);
+// Adiciona um delay de 1 segundo para o teste
+    await waitFor(() => { // espera o componente ser renderizado para fazer o teste
+    expect(screen.getByText("1")).toBeInTheDocument()
+    })
+
+    
+  });
+
+  
 });
