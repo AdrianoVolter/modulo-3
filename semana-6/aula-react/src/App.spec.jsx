@@ -2,32 +2,34 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 
-
-const usario = userEvent;
-
-describe("App", () => {
-  test("Deveria existir uma logo do React", () => {
+describe("deve redenrizar os componentes", () => {
+  test('deve renderizar o o texto "Hello"', () => {
     render(<App />);
-    const logo = screen.getByAltText(/react logo/i);
-    expect(logo).toBeInTheDocument();
-  })
+    const linkElement = screen.getByText(/Hello/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 
-  test("Deveria existir um título com o texto Vite + React", () => {
+  test('deve renderizar o o texto "digite seu nome"', () => {
     render(<App />);
-    const title = screen.getByRole("heading", { name: /vite \+ react/i });
-    expect(title).toBeInTheDocument();
-  })
+    const inputElement = screen.getByPlaceholderText(/digite seu nome/i);
+    expect(inputElement).toBeInTheDocument();
+  });
 
-  //usuario clica no botão e o contador deve ser incrementado
-    test("Deveria existir um botão com o texto Contador: 0", async () => {
+  test("deve renderizar a imagem", () => {
     render(<App />);
-    const button = screen.getByRole("button", { name: /contador: 0/i });
-    expect(button).toBeInTheDocument();
+    const imgElement = screen.queryByRole("img");
+    expect(imgElement).toBeInTheDocument();
+  });
 
-    await usario.click(button);
+});
 
-    const contador = screen.getByRole("button", { name: /contador: 1/i });
-    expect(contador).toBeInTheDocument();
-    })
-
-})
+describe("deve encontrar a imagem com texto alternativo correto", () => {
+  test("deve encontrar a imagem com texto alternativo correto", () => {
+    render(<App />);
+    const imgElement = screen.getByAltText(
+      "ilustração de uma mulher negra usando o computador e segurando uma xícara"
+    );
+    expect(imgElement).toBeInTheDocument();
+  });
+}
+);
