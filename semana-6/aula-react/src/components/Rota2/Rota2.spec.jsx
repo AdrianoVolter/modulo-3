@@ -1,18 +1,10 @@
-import { render, screen, act } from "@testing-library/react";
-import Joke from "./index.jsx";
+import React from 'react';
+import { render } from '@testing-library/react';
+import Rota2 from './index.jsx';
 
-const mockData = { value: "O que é, o que é? Cai em pé e corre deitado? R: A chuva." };
+test('Renderiza o componente Rota3 corretamente', () => {
+  const { getByText } = render(<Rota2 />);
+  const rota3Element = getByText('Rota 2');
 
-global.fetch = jest.fn(() => Promise.resolve({ json: () => Promise.resolve(mockData) }));
-
-describe("Joke", () => {
- it("should display a joke", async () => {
-   render(<Joke />);
-    screen.debug();
-   const joke = await screen.findByText(mockData.value);
-   expect(joke).toBeInTheDocument();
-    screen.debug();
- });
-
+  expect(rota3Element).toBeInTheDocument();
 });
-
