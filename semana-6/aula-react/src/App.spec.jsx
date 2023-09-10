@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { getByText, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 
@@ -20,7 +20,6 @@ describe("deve redenrizar os componentes", () => {
     const imgElement = screen.queryByRole("img");
     expect(imgElement).toBeInTheDocument();
   });
-
 });
 
 describe("deve encontrar a imagem com texto alternativo correto", () => {
@@ -31,5 +30,33 @@ describe("deve encontrar a imagem com texto alternativo correto", () => {
     );
     expect(imgElement).toBeInTheDocument();
   });
-}
-);
+
+  test("Deve pegar o input corretamente", async () => {
+    render(<App />);
+    const inputElement = screen.queryByPlaceholderText(/digite seu nome/i);
+
+    userEvent.type(inputElement, "João");
+
+    await waitFor(() => {
+      const nameElement = screen.getByText(/João/i);
+      expect(nameElement).toBeInTheDocument();
+    });
+  });
+
+  test("Deve mostrar o nome digitado abaixo do input", async () => {
+    render(<App />);
+    const inputElement = screen.queryByPlaceholderText(/digite seu nome/i);
+
+    userEvent.type(inputElement, "João");
+    
+  
+    await waitFor(() => {
+      
+      expect(screen.getByText(/João/i)).toBeInTheDocument();
+      expect(screen.getByText(/hello/i)).toBeInTheDocument("Hello, João");
+    }
+    );
+  });
+});
+
+    
